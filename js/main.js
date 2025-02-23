@@ -238,6 +238,41 @@ class LuxuryCarApp {
     }
 }
 
+// Mobile Menu Functionality
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navMenu = document.querySelector('.main-nav ul');
+let isMenuOpen = false;
+
+function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    navMenu.classList.toggle('active');
+    
+    // Animate hamburger to X
+    const spans = mobileMenuBtn.querySelectorAll('span');
+    spans[0].style.transform = isMenuOpen ? 'rotate(45deg) translate(6px, 6px)' : 'none';
+    spans[1].style.opacity = isMenuOpen ? '0' : '1';
+    spans[2].style.transform = isMenuOpen ? 'rotate(-45deg) translate(6px, -6px)' : 'none';
+    
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+}
+
+mobileMenuBtn.addEventListener('click', toggleMenu);
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (isMenuOpen && !e.target.closest('.mobile-menu-btn') && !e.target.closest('.main-nav ul')) {
+        toggleMenu();
+    }
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.main-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (isMenuOpen) toggleMenu();
+    });
+});
+
 // Initialize the application when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new LuxuryCarApp();

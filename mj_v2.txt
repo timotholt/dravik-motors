@@ -1,0 +1,80 @@
+# Dravik Motors - Midjourney Prompts
+# Each prompt is ready to copy and paste, including all necessary parameters
+
+## Hero Images
+
+/imagine automotive photo luxury electric sedan, front 3/4 view, dramatic lighting, modern architectural background, sleek design, cinematic composition, professional automotive photography, showroom quality, ultra-detailed, --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine luxury electric car in motion on scenic mountain road at sunset, motion blur, dramatic clouds, professional automotive photography, cinematic lighting, perfect composition, photorealistic --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine ultra-luxury electric vehicle at night in front of modern glass building, dramatic LED lighting, reflective surfaces, professional car photography, architectural lighting, perfect composition --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+## Phantom Model - Exterior (Repeat for each color)
+
+/imagine ultra-luxury electric sedan front view, Rolls-Royce inspired design, prominent chrome grille, LED matrix headlights, professional studio lighting, clean white background, showroom quality, ultra-detailed --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine premium electric car rear view, sleek LED taillights, wide stance, chrome accents, studio lighting, perfect composition, photorealistic, clean background --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine luxury sedan side profile, long wheelbase, clean lines, floating roofline, professional car photography, studio lighting, perfect composition --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine electric luxury car 3/4 front view, imposing presence, chrome details, LED signature lights, architectural background, dramatic lighting, cinematic --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine premium sedan 3/4 rear view, muscular haunches, chrome trim, luxury details, studio lighting, perfect composition --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+## Interior Shots (Universal)
+
+/imagine ultra-luxury car interior, driver's cockpit view, digital dashboard, leather and wood trim, ambient lighting, perfect composition, photorealistic --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine premium car dashboard close-up, digital displays, chrome accents, wood inlays, luxury materials, perfect lighting, ultra-detailed --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine rear seat luxury interior, reclining seats, champagne cooler, ambient lighting, premium materials, perfect composition --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine interior detail shot of hand-stitched leather seats, quilted pattern, premium materials, perfect macro photography --ar 1:1 --v 6 --style raw --no text, no watermark, no logos
+
+## Detail Shots
+
+/imagine luxury car wheel close-up, multi-spoke design, chrome finish, premium brakes, studio lighting, perfect detail --ar 1:1 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine front grille and headlights close-up, intricate chrome details, LED lighting signature, perfect automotive photography --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+## Color Variants (Add to each exterior shot)
+
+# Celestial Silver
+/imagine [EXTERIOR_PROMPT], celestial silver metallic paint, mirror finish, perfect reflections --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+# Midnight Black
+/imagine [EXTERIOR_PROMPT], deep midnight black paint, glass flake effect, perfect finish --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+# Arctic White
+/imagine [EXTERIOR_PROMPT], arctic white pearl paint, premium finish, perfect lighting --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+# Royal Blue
+/imagine [EXTERIOR_PROMPT], deep royal blue metallic paint, rich lustre, perfect reflections --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+# Emerald Green
+/imagine [EXTERIOR_PROMPT], deep emerald green metallic paint, premium finish, perfect lighting --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+## Lifestyle/Context Images
+
+/imagine luxury electric car in front of minimalist modern mansion, sunset lighting, architectural photography, perfect composition --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine premium sedan at exclusive yacht club, ocean backdrop, luxury lifestyle, golden hour lighting, perfect composition --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine electric luxury car in urban environment, modern city backdrop, night photography, neon reflections, perfect composition --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine ultra-luxury vehicle at red carpet event, premium environment, evening lighting, perfect composition --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+## Feature Highlight Images
+
+/imagine luxury car aerodynamic visualization, technical cutaway view, high-tech, professional technical illustration, perfect detail --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine advanced driver assistance systems visualization, HUD display, technical illustration, perfect composition --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+/imagine luxury car safety feature demonstration, multiple camera and sensor visualization, perfect technical illustration --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+
+# Batch Processing Notes:
+1. Each prompt includes --ar (aspect ratio), --v 6 (version), --style raw, and no text/watermark parameters
+2. For 16:9 shots: Use --ar 16:9 for website banners and car shots
+3. For square shots: Use --ar 1:1 for detail views and social media
+4. All prompts are complete and ready to copy/paste
+5. For color variants, replace [EXTERIOR_PROMPT] with the base exterior shot prompt

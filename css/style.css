@@ -85,6 +85,22 @@ body {
     color: var(--accent-color);
 }
 
+/* Mobile Menu */
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 5px 0;
+    transition: all var(--transition-speed);
+}
+
 /* Hero Section */
 #hero {
     height: 100vh;
@@ -232,6 +248,41 @@ body {
     resize: vertical;
 }
 
+/* Image Handling */
+.car-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity var(--transition-speed);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.detail-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Loading States */
+.image-loading {
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+}
+
+.image-loaded {
+    opacity: 1;
+}
+
 /* Buttons */
 .cta-button {
     padding: 1.2rem 2.4rem;
@@ -310,26 +361,112 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .main-nav {
-        padding: 1rem;
-        background: var(--primary-color);
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .mobile-menu-btn {
+        display: block;
     }
 
+    .main-nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .main-nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 80%;
+        max-width: 400px;
+        background: var(--overlay-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right var(--transition-speed);
+    }
+
+    .main-nav ul.active {
+        right: 0;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    /* Hero Section */
     .hero-content {
-        padding: 0 2rem;
+        padding: 0 1.5rem;
+        text-align: center;
     }
 
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    /* Sections Padding */
+    #models, #customize, #features, #contact {
+        padding: 3rem 1.5rem;
+    }
+
+    /* Model Selector */
+    .model-selector {
+        grid-template-columns: 1fr;
+    }
+
+    /* Customizer */
     .customizer {
         flex-direction: column;
     }
 
-    .footer-content {
-        flex-direction: column;
+    .car-display {
+        aspect-ratio: 16/9;
+    }
+
+    .controls {
+        width: 100%;
+    }
+
+    /* Feature Grid */
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Tablet Adjustments */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .model-selector {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .customizer {
         gap: 2rem;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .model-card:hover {
+        transform: none;
+    }
+
+    .main-nav a:hover::after {
+        width: 0;
+    }
+
+    .main-nav a:active::after {
+        width: 100%;
     }
 }
