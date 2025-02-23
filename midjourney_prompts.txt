@@ -1,0 +1,78 @@
+# Midjourney Prompts for Luxury Car Website
+
+## Base Prompts Modifiers (add these to each prompt):
+--ar 16:9 --v 6 --style raw --no text, no watermark
+
+## Hero Images
+1. "Hyperrealistic luxury electric sedan, front 3/4 view, dramatic lighting, modern architectural background, sleek design, cinematic, high-end automotive photography style"
+2. "Luxury electric car in motion on scenic mountain road at sunset, motion blur, dramatic clouds, professional automotive photography"
+3. "Ultra-luxury electric vehicle at night in front of modern glass building, dramatic LED lighting, reflective surfaces, professional car photography"
+
+## Phantom Model
+### Exterior Views
+1. "Ultra-luxury electric sedan front view, Rolls-Royce inspired, chrome grille, LED headlights, professional studio lighting, white background"
+2. "Premium electric car rear view, sleek LED taillights, wide stance, chrome accents, studio lighting"
+3. "Luxury sedan side profile, long wheelbase, clean lines, floating roofline, professional car photography"
+4. "Electric luxury car 3/4 front view, imposing presence, chrome details, LED signature lights, architectural background"
+5. "Premium sedan 3/4 rear view, muscular haunches, chrome trim, luxury details, studio lighting"
+6. "Aerial view of luxury electric sedan, panoramic glass roof, clean design, professional car photography"
+7. "Close-up of front grille and headlights, intricate chrome details, LED lighting signature, luxury car photography"
+8. "Premium wheel design close-up, multi-spoke pattern, chrome finish, luxury branding, studio lighting"
+
+### Interior Shots
+1. "Ultra-luxury car interior, driver's perspective, digital dashboard, leather and wood trim, ambient lighting"
+2. "Premium car dashboard, digital displays, chrome accents, wood inlays, luxury materials"
+3. "Rear seat luxury interior, reclining seats, champagne cooler, ambient lighting, premium materials"
+4. "Interior detail shot of hand-stitched leather seats, quilted pattern, premium materials"
+5. "Wood trim and metal accent details, luxury car interior craftsmanship"
+6. "Panoramic glass roof interior view, ambient lighting, premium materials"
+
+## Spectre Model
+### Exterior Views
+[Repeat the exterior view prompts above but add:]
+"More aggressive styling, sportier stance, larger wheels, performance-oriented design"
+
+### Interior Shots
+[Repeat the interior shot prompts above but add:]
+"Sport-luxury interior, carbon fiber trim, red accent stitching, race-inspired design"
+
+## Wraith Model
+### Exterior Views
+[Repeat the exterior view prompts above but add:]
+"Coupe body style, fastback design, dramatic proportions, grand tourer aesthetic"
+
+### Interior Shots
+[Repeat the interior shot prompts above but add:]
+"Grand touring interior, 2+2 seating, premium materials, driver-focused cockpit"
+
+## Color Variants
+Add these color descriptions to each exterior shot:
+1. "Celestial Silver metallic paint, mirror finish"
+2. "Deep Midnight Black paint, glass flake effect"
+3. "Arctic White pearl paint, premium finish"
+4. "Royal Blue metallic paint, deep lustre"
+5. "Emerald Green metallic paint, premium finish"
+6. "Burgundy Red metallic paint, deep shine"
+
+## Feature Highlight Images
+1. "Electric car powertrain visualization, cutaway view, high-tech, professional technical illustration"
+2. "Luxury car trunk space with premium luggage, lifestyle photography"
+3. "Advanced driver assistance systems visualization, HUD display, technical illustration"
+4. "Safety feature demonstration, multiple camera and sensor visualization"
+5. "Performance feature visualization, aerodynamic flow, professional technical illustration"
+
+## Lifestyle/Context Images
+1. "Luxury electric car in front of modern minimalist mansion, sunset lighting, architectural photography"
+2. "Premium sedan at exclusive yacht club, ocean backdrop, luxury lifestyle"
+3. "Electric luxury car in urban environment, modern city backdrop, night photography"
+4. "Ultra-luxury vehicle at red carpet event, premium environment, evening lighting"
+
+## Tips for best results:
+1. Use --v 6 for most realistic results
+2. Add --ar 16:9 for website banner images
+3. Add --ar 1:1 for gallery thumbnails
+4. Use --style raw to avoid artistic interpretations
+5. Add "professional car photography, automotive photography, product photography" to get more realistic results
+6. Use "hyperrealistic, photorealistic, ultra-detailed" for key hero shots
+7. Add "dramatic lighting, studio lighting, professional lighting" for better quality
+8. Specify "no text, no watermark" to avoid unwanted elements
