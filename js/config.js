@@ -33,12 +33,16 @@ const CONFIG = {
             description: 'A masterpiece of engineering and design',
             basePrice: 450000,
             colors: [
-                { name: 'Celestial Silver', hex: '#C0C0C0' },
-                { name: 'Midnight Black', hex: '#000000' },
-                { name: 'Arctic White', hex: '#FFFFFF' },
-                { name: 'Royal Blue', hex: '#002366' },
-                { name: 'Emerald Green', hex: '#004D40' },
-                { name: 'Burgundy Red', hex: '#800020' }
+                { name: 'Midnight Black', hex: '#000000', filename: '-black' },
+                { name: 'Arctic White', hex: '#FFFFFF', filename: '-white' },
+                { name: 'Royal Blue', hex: '#0047AB', filename: '-blue' },
+                { name: 'Metallic Blue', hex: '#0066CC', filename: '-metalic-blue' },
+                { name: 'Metallic Burgundy', hex: '#800020', filename: '-metalic-burgundy' },
+                { name: 'Metallic Red', hex: '#FF0000', filename: '-metalic-red' },
+                { name: 'Classic Red', hex: '#DC143C', filename: '-red' },
+                { name: 'Sunset Orange', hex: '#FD5E53', filename: '-orange' },
+                { name: 'Solar Gold', hex: '#FFD700', filename: '-gold' },
+                { name: 'Sunburst Yellow', hex: '#FFD700', filename: '-yellow' }
             ],
             features: [
                 {
@@ -65,11 +69,16 @@ const CONFIG = {
             description: 'Where power meets sophistication',
             basePrice: 380000,
             colors: [
-                { name: 'Celestial Silver', hex: '#C0C0C0' },
-                { name: 'Midnight Black', hex: '#000000' },
-                { name: 'Arctic White', hex: '#FFFFFF' },
-                { name: 'Royal Blue', hex: '#002366' },
-                { name: 'Emerald Green', hex: '#004D40' }
+                { name: 'Midnight Black', hex: '#000000', filename: '-black' },
+                { name: 'Arctic White', hex: '#FFFFFF', filename: '-white' },
+                { name: 'Royal Blue', hex: '#0047AB', filename: '-blue' },
+                { name: 'Metallic Blue', hex: '#0066CC', filename: '-metalic-blue' },
+                { name: 'Metallic Burgundy', hex: '#800020', filename: '-metalic-burgundy' },
+                { name: 'Metallic Red', hex: '#FF0000', filename: '-metalic-red' },
+                { name: 'Classic Red', hex: '#DC143C', filename: '-red' },
+                { name: 'Sunset Orange', hex: '#FD5E53', filename: '-orange' },
+                { name: 'Solar Gold', hex: '#FFD700', filename: '-gold' },
+                { name: 'Sunburst Yellow', hex: '#FFD700', filename: '-yellow' }
             ],
             features: [
                 {
@@ -96,10 +105,16 @@ const CONFIG = {
             description: 'Redefining the grand touring experience',
             basePrice: 320000,
             colors: [
-                { name: 'Celestial Silver', hex: '#C0C0C0' },
-                { name: 'Midnight Black', hex: '#000000' },
-                { name: 'Arctic White', hex: '#FFFFFF' },
-                { name: 'Royal Blue', hex: '#002366' }
+                { name: 'Midnight Black', hex: '#000000', filename: '-black' },
+                { name: 'Arctic White', hex: '#FFFFFF', filename: '-white' },
+                { name: 'Royal Blue', hex: '#0047AB', filename: '-blue' },
+                { name: 'Metallic Blue', hex: '#0066CC', filename: '-metalic-blue' },
+                { name: 'Metallic Burgundy', hex: '#800020', filename: '-metalic-burgundy' },
+                { name: 'Metallic Red', hex: '#FF0000', filename: '-metalic-red' },
+                { name: 'Classic Red', hex: '#DC143C', filename: '-red' },
+                { name: 'Sunset Orange', hex: '#FD5E53', filename: '-orange' },
+                { name: 'Solar Gold', hex: '#FFD700', filename: '-gold' },
+                { name: 'Sunburst Yellow', hex: '#FFD700', filename: '-yellow' }
             ],
             features: [
                 {

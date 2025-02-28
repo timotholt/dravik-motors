@@ -3,7 +3,7 @@
 
 ## Hero Images
 
-/imagine automotive photo luxury electric sedan, front 3/4 view, dramatic lighting, modern architectural background, sleek design, cinematic composition, professional automotive photography, showroom quality, ultra-detailed, --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
+/imagine Editorial photography  automotive photo luxury electric sedan, front 3/4 view, dramatic lighting, modern architectural background, sleek design, cinematic composition, professional automotive photography, showroom quality, ultra-detailed, --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
 
 /imagine luxury electric car in motion on scenic mountain road at sunset, motion blur, dramatic clouds, professional automotive photography, cinematic lighting, perfect composition, photorealistic --ar 16:9 --v 6 --style raw --no text, no watermark, no logos
 

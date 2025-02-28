@@ -9,6 +9,11 @@
 </head>
 <body>
     <nav class="main-nav">
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="logo" id="brand-logo">Loading...</div>
         <ul>
             <li><a href="#models">Models</a></li>
@@ -19,19 +24,23 @@
     </nav>
 
     <section id="hero">
+        <img src="images/hero-main.jpg" alt="Luxury Car Hero Shot">
         <div class="hero-content">
             <h1 id="hero-title">Loading...</h1>
             <p id="hero-tagline">Loading...</p>
             <button class="cta-button">Explore Models</button>
-        </div>
-        <div class="hero-image">
-            <!-- Will be populated by JavaScript -->
         </div>
     </section>
 
     <section id="models">
         <h2>Our Collection</h2>
         <div class="model-selector">
+            <div class="model-card" data-image-id="models.phantom.front">
+                <img class="car-image" src="" alt="Phantom Front View">
+            </div>
+            <div class="model-card" data-image-id="models.phantom.side">
+                <img class="car-image" src="" alt="Phantom Side View">
+            </div>
             <!-- Will be populated by JavaScript -->
         </div>
     </section>
@@ -39,11 +48,12 @@
     <section id="customize">
         <h2>Customize Your Vehicle</h2>
         <div class="customizer">
-            <div class="car-display">
-                <!-- Will be populated by JavaScript -->
+            <div class="car-display" data-image-id="models.phantom.front34">
+                <img class="car-image" src="" alt="Phantom 3/4 View">
             </div>
             <div class="controls">
                 <div class="color-picker">
+                    <h3>Current Color: <span class="selected-color">Loading...</span></h3>
                     <!-- Will be populated by JavaScript -->
                 </div>
                 <div class="angle-picker">

@@ -73,12 +73,10 @@ class LuxuryCarApp {
 
     initializeCustomizer() {
         const colorPicker = document.querySelector('.color-picker');
-        const anglePicker = document.querySelector('.angle-picker');
-        if (!colorPicker || !anglePicker) return;
+        if (!colorPicker) return;
 
         // Initialize color picker
-        colorPicker.innerHTML = `
-            <h3>Select Color</h3>
+        const colorOptionsHtml = `
             <div class="color-options">
                 ${this.currentModel.colors.map(color => `
                     <div class="color-option ${this.currentColor.name === color.name ? 'active' : ''}"
@@ -89,6 +87,23 @@ class LuxuryCarApp {
                 `).join('')}
             </div>
         `;
+        
+        // Add color options after the existing h3 title
+        const existingTitle = colorPicker.querySelector('h3');
+        if (existingTitle) {
+            existingTitle.insertAdjacentHTML('afterend', colorOptionsHtml);
+        } else {
+            colorPicker.innerHTML = colorOptionsHtml;
+        }
+
+        // Update the selected color text
+        const selectedColor = colorPicker.querySelector('.selected-color');
+        if (selectedColor) {
+            selectedColor.textContent = this.currentColor.name;
+        }
+
+        const anglePicker = document.querySelector('.angle-picker');
+        if (!anglePicker) return;
 
         // Initialize angle picker
         anglePicker.innerHTML = `
@@ -215,19 +230,45 @@ class LuxuryCarApp {
         const carDisplay = document.querySelector('.car-display');
         if (!carDisplay) return;
 
-        // Here you would typically update the car image based on the current model, color, and angle
-        // For now, we'll just show a placeholder message
-        carDisplay.innerHTML = `
-            <div class="placeholder-message">
-                <h3>${this.currentModel.name} - ${this.currentColor.name}</h3>
-                <p>View: ${this.currentAngle.name}</p>
-            </div>
-        `;
+        // Add loading state
+        carDisplay.classList.add('loading');
+        
+        // Construct the image path based on current selections
+        const imagePath = `images/phantom/colors/phantom-front34${this.currentColor.filename}.png`;
+        
+        // Update the car image
+        const img = carDisplay.querySelector('img') || document.createElement('img');
+        
+        // Handle image load completion
+        img.onload = () => {
+            carDisplay.classList.remove('loading');
+        };
+        
+        img.onerror = () => {
+            carDisplay.classList.remove('loading');
+            console.error(`Failed to load image: ${imagePath}`);
+        };
+        
+        img.src = imagePath;
+        img.alt = `${this.currentModel.name} in ${this.currentColor.name}`;
+        img.className = 'car-image';
+        
+        if (!carDisplay.contains(img)) {
+            carDisplay.appendChild(img);
+        }
+
+        // Update the color name display
+        const colorName = document.querySelector('.selected-color');
+        if (colorName) {
+            colorName.textContent = this.currentColor.name;
+        }
     }
 
     updateColorSelection() {
+        // Update active state of color options
         document.querySelectorAll('.color-option').forEach(option => {
-            option.classList.toggle('active', option.dataset.color === this.currentColor.name);
+            const isActive = option.dataset.color === this.currentColor.name;
+            option.classList.toggle('active', isActive);
         });
     }
 
