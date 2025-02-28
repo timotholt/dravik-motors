@@ -4,12 +4,18 @@ class LuxuryCarApp {
         this.currentModel = CONFIG.models[0];
         this.currentColor = this.currentModel.colors[0];
         this.currentAngle = CONFIG.angles[0];
+        this.currentSlide = 0;
+        this.slideCount = document.querySelectorAll('.hero-slide').length;
+        this.slideInterval = null;
+        this.carNames = ['Phantom', 'Spectre', 'Wraith', 'Ghost']; // Car names for each slide
+        this.carPrices = [450000, 380000, 320000, 290000]; // Prices for each car in USD
         this.init();
     }
 
     init() {
         this.initializeTheme();
         this.initializeBranding();
+        this.initializeHeroSlideshow();
         this.initializeModelSelector();
         this.initializeCustomizer();
         this.initializeFeatures();
@@ -27,28 +33,107 @@ class LuxuryCarApp {
     }
 
     initializeBranding() {
-        // Update page title
+        // Update document title
         document.getElementById('page-title').textContent = `${CONFIG.brand.name} - ${CONFIG.brand.tagline}`;
         
         // Update navigation
         document.getElementById('brand-logo').textContent = CONFIG.brand.name;
         
         // Update hero section
-        document.getElementById('hero-title').textContent = CONFIG.brand.name;
-        document.getElementById('hero-tagline').textContent = CONFIG.brand.tagline;
+        const heroTitle = document.getElementById('hero-title');
+        if (heroTitle) {
+            heroTitle.textContent = CONFIG.brand.name;
+        }
+        
+        const heroTagline = document.getElementById('hero-tagline');
+        if (heroTagline) {
+            heroTagline.textContent = CONFIG.brand.tagline;
+        }
         
         // Update footer
         document.getElementById('footer-brand').textContent = CONFIG.brand.name;
         document.getElementById('footer-tagline').textContent = CONFIG.brand.tagline;
         document.getElementById('copyright').textContent = 
-            ` ${CONFIG.brand.year} ${CONFIG.brand.name}. All rights reserved.`;
+            ` ${CONFIG.brand.year} ${CONFIG.brand.name}. All Rights Reserved.`;
+    }
+    
+    initializeHeroSlideshow() {
+        // Set up initial slide
+        this.goToSlide(0);
         
-        // Update social links
-        const socialLinks = document.getElementById('social-links');
-        socialLinks.innerHTML = Object.entries(CONFIG.brand.social)
-            .map(([platform, url]) => `
-                <a href="${url}"><i class="fab fa-${platform}"></i></a>
-            `).join('');
+        // Set up controls
+        const prevButton = document.querySelector('.prev-slide');
+        const nextButton = document.querySelector('.next-slide');
+        const indicators = document.querySelectorAll('.hero-indicator');
+        
+        prevButton.addEventListener('click', () => this.changeSlide('prev'));
+        nextButton.addEventListener('click', () => this.changeSlide('next'));
+        
+        // Set up indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => this.goToSlide(index));
+        });
+        
+        // Start automatic slideshow
+        this.startSlideshow();
+    }
+    
+    startSlideshow() {
+        // Clear any existing interval
+        if (this.slideInterval) {
+            clearInterval(this.slideInterval);
+        }
+        
+        // Set new interval for automatic slideshow (every 5 seconds)
+        this.slideInterval = setInterval(() => {
+            this.changeSlide('next');
+        }, 5000);
+    }
+    
+    changeSlide(direction) {
+        // Reset the automatic slideshow timer
+        this.startSlideshow();
+        
+        // Calculate the new slide index
+        let newSlideIndex;
+        if (direction === 'next') {
+            newSlideIndex = (this.currentSlide + 1) % this.slideCount;
+        } else {
+            newSlideIndex = (this.currentSlide - 1 + this.slideCount) % this.slideCount;
+        }
+        
+        this.goToSlide(newSlideIndex);
+    }
+    
+    goToSlide(slideIndex) {
+        // Get all slides and indicators
+        const slides = document.querySelectorAll('.hero-slide');
+        const indicators = document.querySelectorAll('.hero-indicator');
+        const carNameDisplay = document.getElementById('car-name');
+        const carPriceDisplay = document.getElementById('car-price');
+        
+        if (slides.length === 0 || indicators.length === 0) return;
+        
+        // Remove active class from current slide and indicator
+        slides[this.currentSlide].classList.remove('active');
+        indicators[this.currentSlide].classList.remove('active');
+        
+        // Add active class to new slide and indicator
+        slides[slideIndex].classList.add('active');
+        indicators[slideIndex].classList.add('active');
+        
+        // Update car name display
+        if (carNameDisplay && this.carNames[slideIndex]) {
+            carNameDisplay.textContent = this.carNames[slideIndex];
+        }
+        
+        // Update car price display
+        if (carPriceDisplay && this.carPrices[slideIndex]) {
+            carPriceDisplay.textContent = `Experience starts at $${this.carPrices[slideIndex].toLocaleString()}`;
+        }
+        
+        // Update current slide index
+        this.currentSlide = slideIndex;
     }
 
     initializeModelSelector() {

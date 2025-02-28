@@ -24,11 +24,47 @@
     </nav>
 
     <section id="hero">
-        <img src="images/hero-main.jpg" alt="Luxury Car Hero Shot">
+        <div class="hero-slideshow">
+            <div class="hero-slide active">
+                <img src="images/hero-main.jpg" alt="Luxury Car on Mountain Road">
+            </div>
+            <div class="hero-slide">
+                <img src="images/hero-placeholder-1.jpg" alt="Luxury Car Interior" onerror="this.src='images/hero-main.jpg'">
+            </div>
+            <div class="hero-slide">
+                <img src="images/hero-placeholder-2.jpg" alt="Luxury Car Front View" onerror="this.src='images/hero-main.jpg'">
+            </div>
+            <div class="hero-slide">
+                <img src="images/hero-placeholder-3.jpg" alt="Luxury Car Rear View" onerror="this.src='images/hero-main.jpg'">
+            </div>
+        </div>
         <div class="hero-content">
-            <h1 id="hero-title">Loading...</h1>
-            <p id="hero-tagline">Loading...</p>
-            <button class="cta-button">Explore Models</button>
+            <div class="grid-item car-name">
+                <h1 id="car-name">Phantom</h1>
+            </div>
+            <div class="grid-item blank"></div>
+            <div class="grid-item arrow-controls">
+                <div class="hero-control prev-slide">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="hero-control next-slide">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="grid-item car-price">
+                <p id="car-price">Experience starts at $450,000</p>
+            </div>
+            <div class="grid-item indicators">
+                <div class="hero-indicators">
+                    <div class="hero-indicator active" data-slide="0"></div>
+                    <div class="hero-indicator" data-slide="1"></div>
+                    <div class="hero-indicator" data-slide="2"></div>
+                    <div class="hero-indicator" data-slide="3"></div>
+                </div>
+            </div>
+            <div class="grid-item discover-button">
+                <button class="cta-button">Discover</button>
+            </div>
         </div>
     </section>
 
