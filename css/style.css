@@ -318,10 +318,17 @@ body {
     /* Navigation */
     .mobile-menu-btn {
         display: block;
+        order: 2; /* Move to the right side */
     }
 
     .main-nav {
         padding: 1rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        order: 1; /* Keep logo on the left */
     }
 
     .main-nav ul {
