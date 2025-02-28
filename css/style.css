@@ -134,7 +134,7 @@ body {
     /* Grid Layout */
     display: grid;
     grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 0.5fr 2fr;
     gap: 0.8rem 1rem;
     align-items: center;
 }
@@ -172,18 +172,19 @@ body {
     gap: 0.5rem;
 }
 
-.car-price {
+.car-tagline {
     grid-column: 1;
     grid-row: 2;
     justify-content: flex-start;
 }
 
-#car-price {
-    font-size: 0.85rem;
+#car-tagline {
+    font-size: 0.8rem;
     margin: 0;
     color: var(--lightText-color);
     opacity: 0.9;
     text-align: left;
+    line-height: 1.3;
 }
 
 .indicators {
@@ -288,14 +289,14 @@ body {
         bottom: 8%;
         padding: 1rem;
         gap: 0.6rem 0.8rem;
-        grid-template-columns: 1fr 1fr 0.8fr;
+        grid-template-columns: 2fr 0.5fr 1.5fr;
     }
     
     #car-name {
         font-size: 1.6rem;
     }
     
-    #car-price {
+    #car-tagline {
         font-size: 0.75rem;
     }
     

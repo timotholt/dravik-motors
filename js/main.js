@@ -8,7 +8,12 @@ class LuxuryCarApp {
         this.slideCount = document.querySelectorAll('.hero-slide').length;
         this.slideInterval = null;
         this.carNames = ['Phantom', 'Spectre', 'Wraith', 'Ghost']; // Car names for each slide
-        this.carPrices = [450000, 380000, 320000, 290000]; // Prices for each car in USD
+        this.carTaglines = [
+            'The pinnacle of luxury',              // Phantom
+            'Electrifying performance',            // Spectre
+            'Commanding presence',                 // Wraith
+            'Effortless elegance'                  // Ghost
+        ]; // Taglines for each car
         this.init();
     }
 
@@ -110,7 +115,7 @@ class LuxuryCarApp {
         const slides = document.querySelectorAll('.hero-slide');
         const indicators = document.querySelectorAll('.hero-indicator');
         const carNameDisplay = document.getElementById('car-name');
-        const carPriceDisplay = document.getElementById('car-price');
+        const carTaglineDisplay = document.getElementById('car-tagline');
         
         if (slides.length === 0 || indicators.length === 0) return;
         
@@ -127,9 +132,9 @@ class LuxuryCarApp {
             carNameDisplay.textContent = this.carNames[slideIndex];
         }
         
-        // Update car price display
-        if (carPriceDisplay && this.carPrices[slideIndex]) {
-            carPriceDisplay.textContent = `Experience starts at $${this.carPrices[slideIndex].toLocaleString()}`;
+        // Update car tagline display
+        if (carTaglineDisplay && this.carTaglines[slideIndex]) {
+            carTaglineDisplay.textContent = this.carTaglines[slideIndex];
         }
         
         // Update current slide index
